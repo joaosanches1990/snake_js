@@ -83,6 +83,12 @@ function drawGame() {
   if (score > 10) {
     speed = 11;
   }
+  if (score > 15) {
+    speed = 14;
+  }
+  if (score > 20) {
+    speed = 20;
+  }
 
   setTimeout(drawGame, 1000 / speed);
 }
@@ -128,10 +134,10 @@ function isGameOver() {
       // Fill with gradient
       ctx.fillStyle = gradient;
 
-      ctx.fillText("Game Over!", canvas.width / 6.5, canvas.height / 2);
+      ctx.fillText("Game Over!", canvas.width / 8, canvas.height / 2);
     }
 
-    ctx.fillText("Game Over!", canvas.width / 6.5, canvas.height / 2);
+    ctx.fillText("Game Over!", canvas.width / 8, canvas.height / 2);
   }
 
   return gameOver;
